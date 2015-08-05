@@ -1,0 +1,16 @@
+
+<div class='page-header'>
+	<h1> Bumbershoot </h1>
+</div>
+
+<div ng-repeat="item in items | orderBy :'category'">
+	{{item.name}} in {{item.category}} category. Picture: {{item.image}}
+	<span>
+		<a href="#/items/{{$index}}">View Details</a>
+	</span>
+</div>
+<form ng-click="addItem()">
+	<input type="text" ng-model="name"></input>
+	<button type="submit">Post</button>
+</form>
+
