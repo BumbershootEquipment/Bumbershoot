@@ -21,6 +21,25 @@
 
 		<div ng-repeat="item in items | orderBy :'category'">
 			{{item.name}} in {{item.category}} category. Picture: {{item.image}}
+			<span>
+				<a href="#/items/{{$index}}">View Details</a>
+			</span>
+		</div>
+		<form ng-click="addItem()">
+			<input type="text" ng-model="name"></input>
+			<button type="submit">Post</button>
+		</form>
+	</script>
+
+	<script type="text/ng-template" id="/items.html">
+		<div class="page-header">
+			<h3>
+				<p>{{item.name}}</p>
+			</h3>
+		</div>
+		<div >
+			<p> Product color - {{item.details.color}}</p>
+			<p> Product size - {{item.details.size}}</p>
 		</div>
 	</script>
 
