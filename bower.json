@@ -1,0 +1,17 @@
+{
+  "name": "bumbershoot",
+  "version": "0.0.0",
+  "homepage": "https://github.com/BumbershootEquipment/Bumbershoot",
+  "authors": [
+    "CarsonBills <CarsonMBills@Gmail.com>"
+  ],
+  "description": "Camping Gear Rentals",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
