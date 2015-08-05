@@ -3,11 +3,10 @@ angular.module("bumbershoot", [])
 "$scope",
 function($scope){
 	$scope.items = [
-		"item1",
-		"item2",
-		"item3",
-		"item4",
-		"item5"
+		{name: "tent", category: "sleep", image: "Picture of a tent"},
+		{name: "stove", category: "cook", image: "Picture of a stove"},
+		{name: "lantern", category: "light", image: "Picture of a lantern"},
+		{name: "fishing pole", category: "recreation", image: "Picture of a fishing pole"},
 	]
 }
 ])

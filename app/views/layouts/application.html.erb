@@ -11,8 +11,8 @@
 </head>
 <body ng-controller="MainCtrl">
 
-	<div ng-repeat="item in items">
-		{{item}}
+	<div ng-repeat="item in items | orderBy :'category'">
+		{{item.name}} in {{item.category}} category. Picture: {{item.image}}
 	</div>
 
 </body>
