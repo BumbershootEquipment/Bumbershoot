@@ -37,10 +37,25 @@
 				<p>{{item.name}}</p>
 			</h3>
 		</div>
-		<div >
-			<p> Product color - {{item.details.color}}</p>
-			<p> Product size - {{item.details.size}}</p>
+		<div>
+			<p>Product color - {{item.details.color}}</p>
+			<p>Product size - {{item.details.size}}</p>
+			<p>Product description - {{item.details.description}}</p>
 		</div>
+		<form ng-submit="addDetail()"
+			<div>
+				<input type="text"
+					placeholder="Description"
+					ng-model="description"></input>
+				<input type="text"
+					placeholder="Color"
+					ng-model="color"></input>
+				<input type="text"
+					placeholder="Size"
+					ng-model="size"></input>
+				<button type="submit">Create</button>
+			</div>
+		</form>
 	</script>
 
 </body>
