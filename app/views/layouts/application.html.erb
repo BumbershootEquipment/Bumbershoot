@@ -10,10 +10,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-controller="MainCtrl">
-
-	<div ng-repeat="item in items | orderBy :'category'">
-		{{item.name}} in {{item.category}} category. Picture: {{item.image}}
+	<div class="container">
+		<ui-view></ui-view>
 	</div>
+
+	<script type="text/ng-template" id="/home.html">
+		<div class='page-header'>
+			<h1> Bumbershoot </h1>
+		</div>
+
+		<div ng-repeat="item in items | orderBy :'category'">
+			{{item.name}} in {{item.category}} category. Picture: {{item.image}}
+		</div>
+	</script>
 
 </body>
 </html>
