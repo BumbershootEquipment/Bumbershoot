@@ -10,8 +10,8 @@ function($stateProvider, $urlRouterProvider) {
 			templateUrl: "home/_home.html",
 			controller: "MainCtrl",
 			resolve: {
-				itemPromise: ["items", function(items){
-					return items.getAll();
+				categoryPromise: ["categories", function(categories){
+					return categories.getAll();
 				}]
 			}
 		})

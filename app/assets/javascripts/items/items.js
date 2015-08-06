@@ -16,7 +16,7 @@ angular.module("bumbershoot")
 		})
 	};
 	o.create = function(item) {
-		return $http.post("/items.json", item).success(function(data){
+		return $http.post("/categories/0/items.json", item).success(function(data){
 			o.items.push(data);
 		});
 	};

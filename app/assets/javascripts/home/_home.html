@@ -1,8 +1,20 @@
 
 <div class='page-header'>
-	<h1> Bumbershoot </h1>
+	<h1> Bumbershoot Categories</h1>
 </div>
 
+
+<div ng-repeat="category in categories">
+	
+	<a href="/categories/{{category.id}}">{{category.name}}</a>
+
+</div>
+
+<form ng-submit="addCategory()">
+	<input type="text" ng-model="name"></input>
+	<button type="submit">Add Category</button>
+</form>
+<!--
 <div ng-repeat="item in items | orderBy :'category'">
 	{{item.name}} in {{item.category}} category. Picture: {{item.image}}
 	<span>
@@ -14,11 +26,12 @@
 	<input type="number" ng-model="category"></input>
 
 
-<!-- 	<select ng-model="category">
+	<select ng-model="category">
 		<option value=1>sleep</option>
 		<option value=2>cook</option>
 		<option value=3>recreation</option>
 		<option value=4>Miscellaneous</option>
-	</select> -->
+	</select>
 	<button type="submit">Create Item</button>
 </form>
+ -->

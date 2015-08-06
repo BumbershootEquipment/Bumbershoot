@@ -1,21 +1,36 @@
 angular.module("bumbershoot")
 .controller("MainCtrl", [
 "$scope",
-"items",
-function($scope, items){
-	$scope.addItem = function(){
-		if(!$scope.item_name || $scope.item_name === ""){return;}
-		items.create({
-			name: $scope.item_name,
-			category_id: $scope.category,
-			image: "Example Image",
-			details: {
-				description: "example description",
-				color: "Example Colors"
-			}
+"categories",
+function($scope, categories){
+	$scope.addCategory = function(){
+		if(!$scope.name || $scope.name === ""){return;}
+		categories.create({
+			name: $scope.name
 		});
 		$scope.name = "";
-		$scope.category = "";
 	}
-	$scope.items = items.items;
+	$scope.categories = categories.categories
 }])
+
+
+
+
+
+
+
+	// $scope.category = categories[$stateParams.id];
+	// $scope.addItem = function(){
+	// 	if(!$scope.item_name || $scope.item_name === ""){return;}
+	// 	items.create(
+	// 		{name: $scope.item_name,
+	// 		category: $scope.category}
+	// 	);
+	// 	$scope.item_name = "";
+	// }
+	// $scope.items = items.items;
+
+
+
+
+
