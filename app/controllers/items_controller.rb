@@ -5,15 +5,15 @@ class ItemsController < ApplicationController
   end
 
   def create
-    respond_with Post.create(post_params)
+    respond_with Item.create(item_params)
   end
 
   def show
-    respond_with Post.find(params[:id])
+    respond_with Item.find(params[:id])
   end
 
   private
   def item_params
-    params.require(:post).permit(:name)
+    params.require(:item).permit(:name)
   end
 end

@@ -5,9 +5,9 @@ angular.module("bumbershoot")
 function($scope, items){
 	$scope.addItem = function(){
 		if(!$scope.name || $scope.name === ""){return;}
-		$scope.items.push({
+		items.create({
 			name: $scope.name,
-			category: "Misc.",
+			category: $scope.category,
 			image: "Example Image",
 			details: {
 				description: "example description",

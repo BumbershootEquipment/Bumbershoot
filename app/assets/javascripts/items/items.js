@@ -13,6 +13,11 @@ angular.module("bumbershoot")
 		return $http.get("/items.json").success(function(data){
 			angular.copy(data, o.items)
 		})
-	}
+	};
+	o.create = function(item) {
+		return $http.post("/items.json", item).success(function(data){
+			o.items.push(data);
+		});
+	};
 	return o;
 }])
