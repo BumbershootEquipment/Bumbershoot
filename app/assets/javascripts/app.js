@@ -15,10 +15,15 @@ function($stateProvider, $urlRouterProvider) {
 				}]
 			}
 		})
-		.state("categories",{
-			url: "/categories",
+		.state("categories", {
+			url: "/categories/{id}",
 			templateUrl: "categories/_categories.html",
-			controller: "CategoriesCtrl"
+			controller: "CategoriesCtrl",
+			resolve: {
+				category: ["$stateParams", "categories", function($stateParams, categories){
+					return categories.get($stateParams.id);
+				}]
+			}
 		})
 		.state("items", {
 			url: "/items/{id}",

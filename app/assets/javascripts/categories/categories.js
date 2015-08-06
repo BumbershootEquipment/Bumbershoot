@@ -15,5 +15,13 @@ angular.module("bumbershoot")
 				o.categories.push(data);
 			});
 		};
+		o.get = function(id) {
+			return $http.get("/categories/" + id +".json").then(function(res){
+				return res.data;
+			});
+		};
+		o.addItem = function(id, item){
+			return $http.post("/categories/" + id + "/items.json", item);
+		};
 	return o;
 }]);

@@ -5,7 +5,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-    respond_with Item.create(item_params)
+    category = Category.find(params[:category_id])
+    item = category.items.create(item_params)
+    respond_with category, item
   end
 
   def show

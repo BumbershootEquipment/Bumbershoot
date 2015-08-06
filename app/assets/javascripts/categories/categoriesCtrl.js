@@ -2,13 +2,16 @@ angular.module("bumbershoot")
 .controller("CategoriesCtrl", [
 "$scope",
 "categories",
-function($scope, categories){
-	$scope.addCategory = function(){
-		if(!$scope.category_name || $scope.category_name === ""){return;}
-		categories.create({
-			name: $scope.category_name,
+"category",
+function($scope, categories, category){
+	$scope.category = category;
+	$scope.addItem = function(){
+		if(!$scope.name || $scope.name === ""){return;}
+		categories.addItem(category.id, {
+			name: $scope.name,
+		}).success(function(item){
+			$scope.category.items.push(item);
 		});
-		$scope.category_name = "";
-	}
-	$scope.categories = categories.categories;
+		$scope.name = "";
+	};
 }])
