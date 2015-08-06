@@ -15,6 +15,11 @@ function($stateProvider, $urlRouterProvider) {
 				}]
 			}
 		})
+		.state("categories",{
+			url: "/categories",
+			templateUrl: "categories/_categories.html",
+			controller: "CategoriesCtrl"
+		})
 		.state("items", {
 			url: "/items/{id}",
 			templateUrl: "items/_items.html",

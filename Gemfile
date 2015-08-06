@@ -37,3 +37,5 @@ gem 'spring',        group: :development
 gem "angular-rails-templates"
 gem 'sprockets', '2.12.3'
 gem "angular_rails_csrf"
+
+gem "pry"

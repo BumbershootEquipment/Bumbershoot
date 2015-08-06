@@ -4,10 +4,10 @@ angular.module("bumbershoot")
 "items",
 function($scope, items){
 	$scope.addItem = function(){
-		if(!$scope.name || $scope.name === ""){return;}
+		if(!$scope.item_name || $scope.item_name === ""){return;}
 		items.create({
-			name: $scope.name,
-			category: $scope.category,
+			name: $scope.item_name,
+			category_id: $scope.category,
 			image: "Example Image",
 			details: {
 				description: "example description",
@@ -15,6 +15,7 @@ function($scope, items){
 			}
 		});
 		$scope.name = "";
+		$scope.category = "";
 	}
 	$scope.items = items.items;
 }])
