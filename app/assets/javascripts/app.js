@@ -28,7 +28,12 @@ function($stateProvider, $urlRouterProvider) {
 		.state("items", {
 			url: "/categories/{cat_id}/items/{item_id}",
 			templateUrl: "items/_items.html",
-			controller: "ItemsCtrl"
+			controller: "ItemsCtrl",
+			resolve: {
+				item: ["$stateParams", "items", function($stateParams, items){
+					return items.get($stateParams.cat_id, $stateParams.item_id);
+				}]
+			}
 		});
 
 	$urlRouterProvider.otherwise("home");

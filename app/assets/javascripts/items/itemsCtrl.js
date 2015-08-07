@@ -1,10 +1,10 @@
 angular.module("bumbershoot")
 .controller("ItemsCtrl", [
 "$scope",
-"$stateParams",
 "items",
-function($scope, $stateParams, items){
-	$scope.item = items.items[$stateParams.id];
+"item",
+function($scope, items, item){
+	$scope.item = item;
 	$scope.addDetail = function(){
 		if($scope.description === ""){return;}
 		$scope.item.details = {
