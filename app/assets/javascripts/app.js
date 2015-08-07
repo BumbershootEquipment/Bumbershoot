@@ -26,7 +26,7 @@ function($stateProvider, $urlRouterProvider) {
 			}
 		})
 		.state("items", {
-			url: "/items/{id}",
+			url: "/categories/{cat_id}/items/{item_id}",
 			templateUrl: "items/_items.html",
 			controller: "ItemsCtrl"
 		});
