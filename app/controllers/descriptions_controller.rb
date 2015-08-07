@@ -1,5 +1,9 @@
 class DescriptionsController < ApplicationController
 
+  def index
+    respond_with Description.all
+  end
+
   def create
     item = Item.find(params[:item_id])
     description = item.description.create(description_params)
