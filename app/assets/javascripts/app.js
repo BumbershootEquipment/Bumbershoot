@@ -1,4 +1,4 @@
-angular.module("bumbershoot", ["ui.router", "templates"])
+angular.module("bumbershoot", ["ui.router", "templates", "Devise"])
 .config([
 "$stateProvider",
 "$urlRouterProvider",
