@@ -11,7 +11,7 @@ function($scope, items, item){
 			body: $scope.body,
 		}).success(function(data){
 			console.log(data)
-			$scope.item.description.body = data.body
+			$scope.item.description = data
 		});
 		$scope.body = "";
 	};
