@@ -1,28 +1,14 @@
 Test
-<p>{{item.name}}</p>
+<p>Item Name: {{item.name}}</p>
 
-<!-- 
-<div class="page-header">
-	<h3>
-		<p>{{item.name}}</p>
-	</h3>
-</div>
-<div>
-	<p>Product color - {{item.details.color}}</p>
-	<p>Product size - {{item.details.size}}</p>
-	<p>Product description - {{item.details.description}}</p>
-</div>
-<form ng-submit="addDetail()"
+<p>Description: {{item.description.body}}</p>
+
+
+<form ng-submit="addDescription()">
 	<div>
 		<input type="text"
 			placeholder="Description"
-			ng-model="description"></input>
-		<input type="text"
-			placeholder="Color"
-			ng-model="color"></input>
-		<input type="text"
-			placeholder="Size"
-			ng-model="size"></input>
-		<button type="submit">Add Detail</button>
+			ng-model="body"></input>
+		<button type="submit">Add Description</button>
 	</div>
-</form> -->
+</form>

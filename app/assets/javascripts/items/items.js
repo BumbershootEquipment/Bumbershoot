@@ -12,6 +12,9 @@ angular.module("bumbershoot")
 		});
 	};
 
+	o.addDescription = function(cat_id, item_id, description) {
+		return $http.post("/categories/" + cat_id + "/items/" + item_id + "/descriptions.json", description);
+	};
 
 // 	o.getAll = function(){
 // 		return $http.get("/categories/0/items.json").success(function(data){

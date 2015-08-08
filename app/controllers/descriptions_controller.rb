@@ -6,8 +6,9 @@ class DescriptionsController < ApplicationController
 
   def create
     item = Item.find(params[:item_id])
-    description = item.description.create(description_params)
-    respond_with item, description
+    new_description = Description.create(description_params)
+    item.description = new_description
+    render :json => new_description
   end
 
   def destroy

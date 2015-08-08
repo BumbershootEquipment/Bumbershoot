@@ -5,13 +5,14 @@ angular.module("bumbershoot")
 "item",
 function($scope, items, item){
 	$scope.item = item;
-	$scope.addDetail = function(){
-		if($scope.description === ""){return;}
-		$scope.item.details = {
-			description: $scope.description,
-			size: $scope.size,
-			color: $scope.color
-		};
-		$scope.description = "";
-	}
+	$scope.addDescription = function(){
+		if($scope.body === ""){return;}
+		items.addDescription(item.category_id, item.id, {
+			body: $scope.body,
+		}).success(function(data){
+			console.log(data)
+			$scope.item.description.body = data.body
+		});
+		$scope.body = "";
+	};
 }])
