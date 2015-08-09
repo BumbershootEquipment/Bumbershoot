@@ -1,4 +1,4 @@
-angular.module("bumbershoot", ["ui.router", "templates", "Devise"])
+angular.module("bumbershoot", ["ui.router", "templates", "Devise", "ngFileUpload"])
 .config([
 "$stateProvider",
 "$urlRouterProvider",

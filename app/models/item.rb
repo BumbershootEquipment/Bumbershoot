@@ -9,6 +9,6 @@ class Item < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   def as_json(options = {})
-    super(options.merge(include: :description, :image))
+    super(options.merge(include: :description))
   end
 end
