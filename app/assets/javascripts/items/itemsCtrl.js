@@ -1,10 +1,9 @@
 angular.module("bumbershoot")
 .controller("ItemsCtrl", [
 "$scope",
-"Upload",
 "items",
 "item",
-function($scope, Upload, items, item){
+function($scope, items, item){
 	$scope.item = item;
 	$scope.addDescription = function(){
 		if($scope.body === ""){return;}

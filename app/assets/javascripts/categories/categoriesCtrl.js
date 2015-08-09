@@ -1,9 +1,10 @@
 angular.module("bumbershoot")
 .controller("CategoriesCtrl", [
 "$scope",
+"Upload",
 "categories",
 "category",
-function($scope, categories, category){
+function($scope, Upload, categories, category){
 	$scope.category = category;
 	$scope.addItem = function(){
 		if(!$scope.name || $scope.name === ""){return;}
