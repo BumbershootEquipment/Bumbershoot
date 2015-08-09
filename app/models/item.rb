@@ -6,9 +6,9 @@ class Item < ActiveRecord::Base
     :thumb => "100x100>",
     :large => "500x500>"
   }
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   def as_json(options = {})
-    super(options.merge(include: :description))
+    super(options.merge(include: :description, :image))
   end
 end
