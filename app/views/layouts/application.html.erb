@@ -10,7 +10,9 @@
 <body ng-controller="MainCtrl">
 	<div class="container">
 		<div ng-include="'nav/_nav.html'"></div>
-		<ui-view></ui-view>
+		<div class="main_content">
+			<ui-view></ui-view>
+		</div>
 	</div>
 </body>
 </html>
