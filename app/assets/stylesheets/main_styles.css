@@ -2,6 +2,14 @@ body {
 	background-color: lightblue;
 }
 
+ul {
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+}
+
 .main_content {
 	margin: 0 auto;
 	text-align: center;
