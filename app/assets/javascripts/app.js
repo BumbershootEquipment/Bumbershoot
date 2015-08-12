@@ -9,7 +9,11 @@ function($stateProvider, $urlRouterProvider) {
 			url: "/home",
 			templateUrl: "home/_home.html",
 			controller: "MainCtrl",
-
+		})
+		.state("about", {
+			url: "/about",
+			templateUrl: "about/_about.html",
+			controller: "AboutCtrl",
 		})
 		.state("equipment", {
 			url: "/equipment",
