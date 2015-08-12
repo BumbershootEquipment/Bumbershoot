@@ -2,9 +2,36 @@ body {
 	background-color: white;
 	font-family: "Nunito", sans-serif;
 	margin: 0;
+	color: #63005D;
+}
+
+h1 {
+	color: #a6e2ff;
+	font-size: 60px;
+}
+
+h2 {
+	color: #d2f0ff;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+.page-header {
+	padding-top: 100px;
 }
 
 .landing-header-container {
+	background-image: url(/assets/figureblack.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	height: 900px;
+	width: 100%;
+}
+
+.landing-image-2 {
 	background-image: url(/assets/figureblack.jpeg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -37,38 +64,4 @@ li {
 .main_content {
 	margin: 0 auto;
 	text-align: center;
-}
-
-.nav-logo {
-	display: inline-block;
-	height: 50px;
-}
-
-.left-nav-links {
-	position: relative;
-	display: inline-block;
-	width: 250px;
-	height: 55px;
-	margin-top: 15px;
-	margin-left: 30px;
-}
-
-.left-text-link {
-	display:inline-block;
-  position: relative;
-  bottom: 15px;
-}
-
-.right-nav-links {
-	float: right;
-}
-
-.right-nav-link {
-	display: inline-block;
-	position: relative;
-	top: 33px;
-}
-
-.nav {
-	height: 60px;
 }
