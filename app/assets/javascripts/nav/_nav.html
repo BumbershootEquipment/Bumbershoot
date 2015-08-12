@@ -1,11 +1,13 @@
-<div ng-controller="NavCtrl">
-	<ul>
-		<li><a href="#/home"><img class="nav-logo" src="/assets/main_logo.png"/></a></li>
-		<li><a href="#/about">About</a></li>
-		<li><a href="#/equipment">Equipment</a></li>
-		<li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
-		<li ng-hide="signedIn()"><a href="#/register">Register</a></li>
-		<li ng-show="signedIn()"><a href="#/">{{user.username}}</a></li>
-		<li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
-	</ul>	
+<div class="nav"ng-controller="NavCtrl">
+	<div class="left-nav-links">
+		<a href="#/home"><img class="nav-logo" src="/assets/main_logo.png"/></a>
+		<a class="left-text-link" href="#/about">About</a>
+		<a class="left-text-link"href="#/equipment">Equipment</a>
+	</div>
+	<div class="right-nav-links">
+			<a class="right-nav-link" ng-hide="signedIn()" href="#/login">Log In</a></li>
+			<a class="right-nav-link" ng-hide="signedIn()" href="#/register">Register</a></li>
+			<a class="right-nav-link" ng-show="signedIn()" href="#/">{{user.username}}</a></li>
+			<a class="right-nav-link" ng-show="signedIn()" ng-click="logout()">Log Out</a></li>
+	</div>
 </div>
