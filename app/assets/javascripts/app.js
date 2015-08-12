@@ -9,6 +9,12 @@ function($stateProvider, $urlRouterProvider) {
 			url: "/home",
 			templateUrl: "home/_home.html",
 			controller: "MainCtrl",
+
+		})
+		.state("equipment", {
+			url: "/equipment",
+			templateUrl: "equipment/_equipment.html",
+			controller: "EquipCtrl",
 			resolve: {
 				categoryPromise: ["categories", function(categories){
 					return categories.getAll();
