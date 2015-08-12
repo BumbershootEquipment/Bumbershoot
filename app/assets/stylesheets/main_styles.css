@@ -5,7 +5,7 @@ html, body {
 	background-color: white;
 	font-family: "Nunito", sans-serif;
 	margin: 0;
-	color: #63005D;
+	color: black;
 	height: 100%;
 }
 
@@ -73,6 +73,7 @@ h3 {
 a{
 	display: inline-block;
 	text-decoration: none;
+	color: white;
 }
 
 ul {
@@ -106,6 +107,12 @@ img.border_logo {
 	width: 100%;
 }
 
-.footer, .push {
+.push {
 	height: 80px;
+}
+
+.footer {
+	height: 80px;
+	text-align: center;
+	background-color: #e4f6ff;
 }
