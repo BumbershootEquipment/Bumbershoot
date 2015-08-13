@@ -1,4 +1,5 @@
 class DescriptionsController < ApplicationController
+  before_filter :authenticate_user!, only: [:create, :destroy]
 
   def index
     respond_with Description.all

@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_filter :authenticate_user!, only: [:create, :destroy]
 
   def create
     category = Category.create(category_params)

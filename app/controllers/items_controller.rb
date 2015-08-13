@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-
+  before_filter :authenticate_user!, only: [:create]
   def index
     respond_with Item.all
   end
