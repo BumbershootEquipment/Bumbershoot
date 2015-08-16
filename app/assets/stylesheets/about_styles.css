@@ -1,0 +1,8 @@
+.about-header {
+	background-image: url(/assets/hike.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	height: 900px;
+	min-width: 100%;
+}
