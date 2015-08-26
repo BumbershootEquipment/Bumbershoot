@@ -39,10 +39,12 @@ h3 {
 .header-container {
 	background-image: url(/assets/figureblack.jpeg);
 	background-repeat: no-repeat;
+	background-size: cover;
 	background-position: center;
 	margin: 0;
 	height: 900px;
 	width: 100%;
+	overflow: hidden;
 }
 
 .image-2 {
