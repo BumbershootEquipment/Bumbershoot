@@ -16,6 +16,9 @@ angular.module("bumbershoot")
 		return $http.post("/categories/" + cat_id + "/items/" + item_id + "/descriptions.json", description);
 	};
 
+
+// placeOrder function goes here
+
 // 	o.getAll = function(){
 // 		return $http.get("/categories/0/items.json").success(function(data){
 // 			angular.copy(data, o.items)
