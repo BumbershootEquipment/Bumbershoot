@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  # before_filter :authenticate_user!, only: [:create]
+  before_filter :authenticate_user!, only: [:create]
 
   def index
     respond_with Order.all
