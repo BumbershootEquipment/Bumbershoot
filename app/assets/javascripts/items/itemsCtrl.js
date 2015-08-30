@@ -18,7 +18,7 @@ function($scope, items, item){
 
 	$scope.placeOrder = function(){
 		items.placeOrder(item.category_id, item.id, {
-			comments: "Standard Order",
+			comments: ($scope.comments) ? $scope.comments : "Standard Order",
 		}).success(function(data){
 			console.log(data)
 		});
