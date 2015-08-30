@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-gem 'rails_admin'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,6 +39,5 @@ gem 'sprockets', '2.12.3'
 gem "angular_rails_csrf"
 gem "devise", "~> 3.4.0"
 gem "paperclip", "~> 4.3"
-gem "piggybak"
 
 gem "pry"

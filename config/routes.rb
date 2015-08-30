@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :items, only: [:create, :index, :show] do
       resources :descriptions do
       end
+      resources :orders do
+      end
     end
   end
 

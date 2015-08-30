@@ -17,7 +17,9 @@ angular.module("bumbershoot")
 	};
 
 
-// placeOrder function goes here
+	o.placeOrder = function(cat_id, item_id, description) {
+		return $http.post("categories/" + cat_id + "/items/" + item_id + "/orders.json", order); 
+	};
 
 // 	o.getAll = function(){
 // 		return $http.get("/categories/0/items.json").success(function(data){

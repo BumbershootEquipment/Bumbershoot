@@ -15,4 +15,12 @@ function($scope, items, item){
 		});
 		$scope.body = "";
 	};
+
+	$scope.placeOrder = function(){
+		items.placeOrder(item.category_id, item.id, {
+		}).success(function(data){
+			console.log(data)
+		});
+	};
+	
 }])
