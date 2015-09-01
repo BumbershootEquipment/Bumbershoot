@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="bumbershoot">
-<head>
-  <title>Bumbershoot</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+	<head>
+		<title>Bumbershoot</title>
+		<%= stylesheet_link_tag    'application', media: 'all' %>
+		<%= javascript_include_tag 'application' %>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
 
-  <%= csrf_meta_tags %>
-</head>
-<body ng-controller="MainCtrl">
-	<div class="container">
-			<div ng-include="'nav/_nav.html'"></div>
-		<div class="main_content">
-			<ui-view></ui-view>
+		<%= csrf_meta_tags %>
+	</head>
+	<body ng-controller="MainCtrl">
+		<div class="container">
+				<div ng-include="'nav/_nav.html'"></div>
+			<div class="main_content">
+				<ui-view></ui-view>
+			</div>
+			<div class="push"></div>
 		</div>
-		<div class="push"></div>
-	</div>
 		<div ng-include="'nav/_footer.html'"></div>
-</body>
+
+	</body>
+	<script>
+		$(function(){
+			setInterval(function(){
+				checkScroll();
+			}, 100)
+		})
+	</script>
 </html>

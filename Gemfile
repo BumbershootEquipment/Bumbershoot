@@ -39,5 +39,6 @@ gem 'sprockets', '2.12.3'
 gem "angular_rails_csrf"
 gem "devise", "~> 3.4.0"
 gem "paperclip", "~> 4.3"
+gem "jquery-rails"
 
 gem "pry"

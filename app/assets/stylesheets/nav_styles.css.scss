@@ -1,8 +1,11 @@
 .nav {
 	height: 80px;
 	width: 100%;
-	background-color: #01142B;
 	position: fixed;
+}
+
+.scrolled_nav {
+	background-color: white;
 }
 .nav-logo {
 	display: inline-block;
