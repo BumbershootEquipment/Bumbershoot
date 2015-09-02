@@ -9,7 +9,7 @@ function checkScroll(){
 function clearNav(){
 	$(".nav").animate({
 		backgroundColor: "rgba(0, 0, 0, 0)"
-	}, 1);
+	}, 50);
 }
 
 function whiteNav(){
