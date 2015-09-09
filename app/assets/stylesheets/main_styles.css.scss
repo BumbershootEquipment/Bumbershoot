@@ -56,6 +56,39 @@ h3 {
 	width: 100%;
 }
 
+.how-it-works{
+	height: 400px;
+	background-color: white;
+}
+
+.how-steps-container{
+	width: 90%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;	
+	padding-left: auto;
+	padding-right: auto;
+	text-align: center;
+}
+
+.how-steps-image{
+	background-color: #f2f2f2;
+	border-radius: 100%;
+	width: 250px;
+	height: 250px;
+}
+
+.how-steps{
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	img {
+		margin-top: 30px;
+		height: 150px;
+	}
+}
+
 .content-1 {
 	height: 200px;
 }
