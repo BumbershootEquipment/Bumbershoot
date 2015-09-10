@@ -10,8 +10,8 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body ng-controller="MainCtrl">
-		<div class="container">
-				<div ng-include="'nav/_nav.html'"></div>
+		<div class="application-container">
+				<div class='nav' ng-include="'nav/_nav.html'"></div>
 			<div class="main_content">
 				<ui-view></ui-view>
 			</div>

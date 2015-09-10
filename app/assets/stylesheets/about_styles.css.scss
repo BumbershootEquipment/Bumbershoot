@@ -1,3 +1,6 @@
+.container {
+	width: 100%;
+}
 .about-header {
 	background-image: url(/assets/caravan.jpg);
 	background-repeat: no-repeat;
@@ -5,6 +8,19 @@
 	margin: 0;
 	height: 600px;
 	min-width: 100%;
+	padding-top: 100px;
+}
+
+.about-title {
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin: auto;
+	h1 {
+		padding-top: 35%;
+		color: #343E52;
+	}
 }
 
 .about-content-1{
@@ -14,3 +30,26 @@
 .about-content-2{
 	height: 300px;
 }
+
+.about-person {
+	height: 350px;
+}
+
+.about-image {
+	margin-top: 50px;
+	img {
+		height: 250px;
+		width: 250px;
+		border-radius: 50%;
+	}
+}
+
+.about-text {
+	margin-top: 100px;
+}
+
+.white {
+	background-color: white;
+}
+
+
