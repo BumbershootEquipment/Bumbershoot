@@ -25,7 +25,7 @@
 
 .about-content-1{
 	height: 300px;
-	background-color: white
+	background-color: #f2f2f2
 }
 .about-content-2{
 	height: 300px;
@@ -52,4 +52,30 @@
 	background-color: white;
 }
 
+.our-story-1{
+	margin-top: 20px;
+}
+
+.our-story-2 {
+	margin-top: 20px;
+	img {
+		height: 80px;
+		margin-bottom: 20px;
+	}
+	h2 {
+		margin-bottom: 10px;
+	}
+}
+
+.say-hi {
+	padding-top: 30px;
+}
+
+.say-hi-logos {
+	a img {
+		margin: 20px 10px 50px 10px;
+
+		width: 80px;
+	}
+}
 
