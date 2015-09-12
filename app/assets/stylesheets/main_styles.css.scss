@@ -9,6 +9,23 @@ html, body {
 	height: 100%;
 }
 
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: grey;
+	&:hover {
+		color: #343E52;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+}
+
 .application-container {
 	margin: 0 auto -80px;
 	min-height: 100%;
@@ -48,6 +65,10 @@ h3 {
 	}
 }
 
+.content-1 {
+	height: 200px;
+}
+
 .image-2 {
 	background-image: url(/assets/hike.jpg);
 	background-repeat: no-repeat;
@@ -57,42 +78,7 @@ h3 {
 	width: 100%;
 }
 
-.how-it-works{
-	height: 400px;
-	background-color: white;
-}
 
-.how-steps-container{
-	width: 90%;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;	
-	padding-left: auto;
-	padding-right: auto;
-	text-align: center;
-}
-
-.how-steps-image{
-	background-color: #f2f2f2;
-	border-radius: 100%;
-	width: 250px;
-	height: 250px;
-}
-
-.how-steps{
-	display: inline-block;
-	margin-left: 10px;
-	margin-right: 10px;
-
-	img {
-		margin-top: 30px;
-		height: 150px;
-	}
-}
-
-.content-1 {
-	height: 200px;
-}
 
 .text-1 {
 	max-width: 740px;
@@ -103,53 +89,57 @@ h3 {
 .text-1-text{
 	margin-top: 20px;
 }
-.content-2 {
-	height: 350px;
+
+
+
+
+
+.how-it-works{
+	height: 100%;
+	background-color: white;
+	padding-top: 30px;
 }
 
-.text-2 {
-	margin-top: 100px;
+.how-steps-container {
+	padding-top: 20px;
+	padding-bottom: 40px;
 }
 
-a{
-	display: inline-block;
-	text-decoration: none;
-	color: grey;
-	&:hover {
-		color: #343E52;
+.how-steps-image{
+	background-color: #f2f2f2;
+	border-radius: 100%;
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.how-steps{
+	img {
+		margin-top: 30px;
+		height: 150px;
 	}
 }
 
-ul {
-	list-style-type: none;
-}
-
-li {
-	display: inline-block;
-}
 
 
-.text-2 {
-	margin: 0 auto;
-	width: 30%;
-	float: left;
-}
 
-.left-2, .right-2{
-	margin-top: 5%;
-}
-
-.left-2 {
-	margin-left: 5%;
-}
-
-.right-2 {
-	margin-right: 5%; 
-}
 
 img.border_logo {
 	width: 100%;
 }
+
+.content-2 {
+	height: 100%;
+}
+
+.text-2{
+	margin-top: 4%;
+}
+
+
+
+
+
 
 .push {
 	height: 80px;
