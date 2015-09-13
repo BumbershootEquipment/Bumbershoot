@@ -1,16 +1,23 @@
+<div class="equipment-background">
+	<div class="equipment-spacer"></div>
+	<div class="grid equipment-container">
+		<div class='equipment-header'>
+			<h1> Bumbershoot Categories</h1>
+		</div>
 
-<div class='page-header'>
-	<h1> Bumbershoot Categories</h1>
+		<div class="categories-container">
+			<div ng-repeat="category in categories">
+				<div class="col-1-4">
+					<div class="equipment-category">
+						<a href="#/categories/{{category.id}}">{{category.name}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<form class="col-1-1 pure-form" ng-submit="addCategory()">
+			<input type="text" ng-model="name"></input>
+			<button class="button-primary" type="submit">Add Category</button>
+		</form>
+	</div>
 </div>
-
-
-<div ng-repeat="category in categories">
-	
-	<a href="#/categories/{{category.id}}">{{category.name}}</a>
-
-</div>
-
-<form ng-submit="addCategory()">
-	<input type="text" ng-model="name"></input>
-	<button type="submit">Add Category</button>
-</form>
