@@ -1,23 +1,29 @@
-<p>Item Name: {{item.name}}</p>
+<div class="item-background">
+	<div class="item-spacer"></div>
+	<div class="item-container">
 
-<p>Description: {{item.description.body}}</p>
+		<p>Item Name: {{item.name}}</p>
 
-<img ng-src="/assets/logos/{{item.category_id}}.png"/>
+		<p>Description: {{item.description.body}}</p>
 
-<form ng-submit="addDescription()">
-	<div>
-		<input type="text"
-			placeholder="Description"
-			ng-model="body"></input>
-		<button type="submit">Add Description</button>
+		<img class="item-image" ng-src="/assets/logos/{{item.category_id}}.png"/>
+
+		<form ng-submit="addDescription()">
+			<div>
+				<input type="text"
+					placeholder="Description"
+					ng-model="body"></input>
+				<button type="submit">Add Description</button>
+			</div>
+		</form>
+
+		<form ng-submit="placeOrder()">
+			<div>
+				<input type="text"
+				placeholder="optional comments"
+				ng-model="comments"></input>
+				<button class='button-primary' type="submit">Order</button>
+			</div>
+		</form>
 	</div>
-</form>
-
-<form ng-submit="placeOrder()">
-	<div>
-		<input type="text"
-		placeholder="optional comments"
-		ng-model="comments"></input>
-		<button type="submit">Order</button>
-	</div>
-</form>
+</div>
