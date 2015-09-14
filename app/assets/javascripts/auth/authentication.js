@@ -6,7 +6,7 @@ angular.module("bumbershoot")
 			authenication: []
 		};
 		o.registerEmail = function(user){
-			return $http.post("/welcome_email", user);
+			return $http.post("/register", user);
 		};
 	return o;
 }]);
