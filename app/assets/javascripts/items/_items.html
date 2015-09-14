@@ -1,10 +1,14 @@
-<div class="item-background">
-	<div class="item-spacer"></div>
-	<div class="item-container">
-
-		<p>Item Name: {{item.name}}</p>
-
-		<p>Description: {{item.description.body}}</p>
+<div class="equipment-background">
+	<div class="equipment-spacer"></div>
+	<div class="equipment-container">
+		<div class="equipment-header">
+			<h3>
+				<p>Item Name: {{item.name}}</p>
+			</h3>
+			<h3>
+				<p>Description: {{item.description.body}}</p>
+			</h3>
+		</div>
 
 		<img class="item-image" ng-src="/assets/logos/{{item.category_id}}.png"/>
 
