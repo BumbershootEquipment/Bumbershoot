@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     end
   end
 
-  post "welcome_email", to: "emails#welcome"
+  post "/welcome_email" => "emails#welcome"
 
 end
