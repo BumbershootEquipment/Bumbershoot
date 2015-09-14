@@ -13,7 +13,6 @@ function($stateProvider, $urlRouterProvider) {
 		.state("about", {
 			url: "/about",
 			templateUrl: "about/_about.html",
-			controller: "AboutCtrl",
 		})
 		.state("community", {
 			url: "/community",
