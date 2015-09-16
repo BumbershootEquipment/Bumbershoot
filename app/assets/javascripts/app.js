@@ -50,9 +50,14 @@ function($stateProvider, $urlRouterProvider) {
 			}
 		})
 		.state("profile", {
-			url: "profile",
-			templateUrl: "users/_users.html",
-			controller: "UsersCtrl"
+			url: "/profile",
+			templateUrl: "users/_profile.html",
+			controller: "UsersCtrl",
+			resolve:{
+				user: ["$state", "Auth", function($state, Auth){
+					return Auth.currentUser()
+				}]
+			}
 		})
 		.state("login", {
 			url: "/login",
