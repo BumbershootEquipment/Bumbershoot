@@ -6,7 +6,7 @@ angular.module("bumbershoot")
 "category",
 function($scope, Upload, categories, category){
 	$scope.category = category;
-	$scope.addItem = function(){
+	$scope.addCorporateItem = function(){
 		if(!$scope.name || $scope.name === ""){return;}
 		categories.addItem(category.id, {
 			name: $scope.name,
