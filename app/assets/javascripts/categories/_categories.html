@@ -7,7 +7,7 @@
 			</h3>
 		</div>
 
-		<div ng-repeat="item in category.items">
+		<div ng-repeat="item in category.items | filter:{corporate: true} ">
 			<a href="#/categories/{{category.id}}/items/{{item.id}}">{{item.name}}</a>
 		</div>
 
