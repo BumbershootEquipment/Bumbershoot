@@ -1,4 +1,22 @@
 <h1>My orders</h1>
 <h1>My Items</h1>
 <h1>Nearby Community Items</h1>
-<h1> Form for new Community Items</h1>
+<h1>Form for new Community Items</h1>
+
+		
+	<div>
+		<form ng-submit="addCommunityItem()">
+			<div>
+				<select>
+					<option value="Sleep">Sleep</option>
+					<option value="Cook">Cook</option>
+					<option value="Recreation">Recreation</option>
+					<option value="Miscellaneous">Miscellaneous</option>
+				</select>
+				<input type="text"
+					placeholder="Item name"
+					ng-model="name"></input>
+				<button class="button-primary" type="submit">Add Item</button>
+			</div>
+		</form>
+	</div>
