@@ -4,14 +4,14 @@
 <h1>Form for new Community Items</h1>
 
 		
-	<div>
+	<div ng-controller="CommunityCtrl">
 		<form ng-submit="addCommunityItem()">
 			<div>
-				<select>
-					<option value="Sleep">Sleep</option>
-					<option value="Cook">Cook</option>
-					<option value="Recreation">Recreation</option>
-					<option value="Miscellaneous">Miscellaneous</option>
+				<select ng-model="category">
+					<option value="1">Sleep</option>
+					<option value="2">Cook</option>
+					<option value="3">Recreation</option>
+					<option value="5">Miscellaneous</option>
 				</select>
 				<input type="text"
 					placeholder="Item name"

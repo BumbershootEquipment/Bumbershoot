@@ -16,4 +16,5 @@ function($scope, Upload, categories, category){
 		});
 		$scope.name = "";
 	};
+
 }])
