@@ -13,4 +13,12 @@ function($scope, categories){
 			console.log("Item added")
 		})
 	};
+
+	$scope.map = {
+		center: {
+			latitude: 40.7,
+			longitude: -74
+		},
+		zoom: 8
+	};
 }])

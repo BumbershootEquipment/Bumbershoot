@@ -3,8 +3,10 @@
 <h1>Nearby Community Items</h1>
 <h1>Form for new Community Items</h1>
 
+<ui-gmap-google-map center="map.center" zoom="map.zoom">
+</ui-gmap-google-map>
 		
-	<div ng-controller="CommunityCtrl">
+	<div>
 		<form ng-submit="addCommunityItem()">
 			<div>
 				<select ng-model="category">
