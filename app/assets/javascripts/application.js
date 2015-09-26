@@ -1,4 +1,6 @@
+//= require lodash
 //= require angular
+//= require angular-google-maps
 //= require ng-file-upload
 //= require angular-devise
 //= require angular-rails-templates
