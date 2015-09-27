@@ -1,5 +1,6 @@
 //= require lodash
 //= require angular
+//= require angular-simple-logger
 //= require angular-google-maps
 //= require ng-file-upload
 //= require angular-devise
