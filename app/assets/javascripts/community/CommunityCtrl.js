@@ -19,6 +19,13 @@ function($scope, categories){
 			latitude: 40.7,
 			longitude: -74
 		},
-		zoom: 8
+		zoom: 12,
+	};
+
+	$scope.marker = {
+		coords: {
+			latitude: 40.715,
+			longitude: -73.987
+		}
 	};
 }])
