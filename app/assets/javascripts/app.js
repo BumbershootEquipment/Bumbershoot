@@ -1,7 +1,7 @@
 angular.module("bumbershoot", ["ui.router", "templates", "Devise", "ngFileUpload", "uiGmapgoogle-maps"])
 .config([
 "$stateProvider",
-"uiGmapGoogle-maps"
+"uiGmapgoogle-maps",
 "$urlRouterProvider",
 function($stateProvider, $urlRouterProvider) {
 
