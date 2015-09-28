@@ -8,7 +8,8 @@ function($scope, categories){
 		var id = $scope.category;
 		categories.addItem(id, {
 			name: $scope.name,
-			corporate: false
+			corporate: false,
+			neighborhood: $scope.neighborhood
 		}).success(function(item){
 			console.log("Item added")
 		})

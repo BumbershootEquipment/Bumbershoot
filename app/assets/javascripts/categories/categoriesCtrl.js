@@ -10,7 +10,8 @@ function($scope, Upload, categories, category){
 		if(!$scope.name || $scope.name === ""){return;}
 		categories.addItem(category.id, {
 			name: $scope.name,
-			corporate: true
+			corporate: true,
+			neighborhood: "Headquarters"
 		}).success(function(item){
 			$scope.category.items.push(item);
 		});
