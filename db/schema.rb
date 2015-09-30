@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150928212544) do
+ActiveRecord::Schema.define(version: 20150930181715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20150928212544) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.boolean  "corporate"
+    t.string   "paypalID"
+    t.decimal  "price"
   end
 
   add_index "items", ["category_id"], name: "index_items_on_category_id", using: :btree
