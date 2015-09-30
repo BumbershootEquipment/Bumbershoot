@@ -3,7 +3,8 @@ angular.module("bumbershoot")
 "$scope",
 "items",
 "item",
-function($scope, items, item){
+"user",
+function($scope, items, item, user){
 	$scope.item = item;
 	$scope.addDescription = function(){
 		if($scope.body === ""){return;}
@@ -18,6 +19,7 @@ function($scope, items, item){
 
 	$scope.placeOrder = function(){
 		items.placeOrder(item.category_id, item.id, {
+			user_id: user.id,
 			comments: ($scope.comments) ? $scope.comments : "Standard Order",
 		}).success(function(data){
 			console.log(data)
