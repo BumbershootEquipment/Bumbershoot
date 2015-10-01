@@ -1,32 +1,36 @@
-<h1>My orders</h1>
-<h1>My Items</h1>
-<h1>Nearby Community Items</h1>
-<h1>Form for new Community Items</h1>
+<div class="community_background">
+	<div class="community_container">
+		<h1>My orders</h1>
+		<h1>My Items</h1>
+		<h1>Nearby Community Items</h1>
+		<h1>Form for new Community Items</h1>
 
-<ui-gmap-google-map center="map.center" zoom="map.zoom">
-	<ui-gmap-marker idkey="1" coords="marker.coords"> </ui-gmap-marker>
-</ui-gmap-google-map>
-		
-	<div>
-		<form ng-submit="addCommunityItem()">
-			<div>
-				<select ng-model="category">
-					<option value="" disabled>Category</option>
-					<option value="1">Sleep</option>
-					<option value="2">Cook</option>
-					<option value="3">Recreation</option>
-					<option value="5">Miscellaneous</option>
-				</select>
-				<select ng-model="neighborhood">
-					<option value="" disabled>Neighborhood</option>
-					<option value="Williamsburg">Williamsburg</option>
-					<option value="Greenpoint">Greenpoint</option>
-					<option value="Bushwick">Bushwick</option>
-				</select>
-				<input type="text"
-					placeholder="Item name"
-					ng-model="name"></input>
-				<button class="button-primary" type="submit">Add Item</button>
-			</div>
-		</form>
+		<ui-gmap-google-map center="map.center" zoom="map.zoom">
+			<ui-gmap-marker idkey="1" coords="marker.coords"> </ui-gmap-marker>
+		</ui-gmap-google-map>
+				
+		<div>
+			<form ng-submit="addCommunityItem()">
+				<div>
+					<select ng-model="category">
+						<option value="" disabled>Category</option>
+						<option value="1">Sleep</option>
+						<option value="2">Cook</option>
+						<option value="3">Recreation</option>
+						<option value="5">Miscellaneous</option>
+					</select>
+					<select ng-model="neighborhood">
+						<option value="" disabled>Neighborhood</option>
+						<option value="Williamsburg">Williamsburg</option>
+						<option value="Greenpoint">Greenpoint</option>
+						<option value="Bushwick">Bushwick</option>
+					</select>
+					<input type="text"
+						placeholder="Item name"
+						ng-model="name"></input>
+					<button class="button-primary" type="submit">Add Item</button>
+				</div>
+			</form>
+		</div>
 	</div>
+</div>
