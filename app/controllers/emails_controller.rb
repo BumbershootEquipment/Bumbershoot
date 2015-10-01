@@ -6,7 +6,7 @@ class EmailsController < ApplicationController
     render nothing: true
   end
 
-  def community_order(user, owner)
+  def community_order
     @user = user
     @owner = owner
     UserMailer.community_order(@user, @owner).deliver
