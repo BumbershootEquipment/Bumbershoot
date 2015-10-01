@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   end
 
   post "/register" => "emails#welcome"
-  post "/community_order" => "emails#community_order"
-  post "/corporate_order" => "emails#corporate_order"
+  get "/community_order/:id", to: "emails#community_order"
+  get "/corporate_order/:id", to: "emails#corporate_order"
 end

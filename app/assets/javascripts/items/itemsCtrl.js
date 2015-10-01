@@ -25,9 +25,8 @@ function($scope, items, item, user){
 			items.corporateOrderEmail(
 				user
 			).success(function(data){
-				console.log(data)
+				console.log("order email")
 			});
-			
 		});
 	};
 

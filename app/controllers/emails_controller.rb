@@ -13,8 +13,8 @@ class EmailsController < ApplicationController
     render nothing: true
   end
 
-  def corporate_order(user)
-    @user = user
+  def corporate_order
+    @user = User.find(params['id'])
     UserMailer.corporate_order(@user).deliver
     render nothing: true
   end
