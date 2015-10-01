@@ -21,8 +21,13 @@ function($scope, items, item, user){
 		items.placeOrder(item.category_id, item.id, {
 			user_id: user.id,
 			comments: ($scope.comments) ? $scope.comments : "Standard Order",
-		}).success(function(data){
-			console.log(data)
+		}).then(function(){
+			items.corporateOrderEmail(
+				user
+			).success(function(data){
+				console.log(data)
+			});
+			
 		});
 	};
 

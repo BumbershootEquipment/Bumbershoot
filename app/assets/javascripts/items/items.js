@@ -21,6 +21,10 @@ angular.module("bumbershoot")
 		return $http.post("categories/" + cat_id + "/items/" + item_id + "/orders.json", order); 
 	};
 
+	o.corporateOrderEmail = function(user){
+		return $http.post("/corporate_order", user);
+	};
+
 // 	o.getAll = function(){
 // 		return $http.get("/categories/0/items.json").success(function(data){
 // 			angular.copy(data, o.items)
