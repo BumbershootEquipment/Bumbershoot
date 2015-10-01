@@ -2,13 +2,15 @@ angular.module('bumbershoot')
 .controller("CommunityCtrl", [
 "$scope",
 "categories",
-function($scope, categories){
+"user",
+function($scope, categories, user){
 	$scope.addCommunityItem = function(){
 		if(!$scope.name || $scope.name === ""){return;}
 		var id = $scope.category;
 		categories.addItem(id, {
 			name: $scope.name,
 			corporate: false,
+			owner: user.email,
 			neighborhood: $scope.neighborhood
 		}).success(function(item){
 			console.log("Item added")

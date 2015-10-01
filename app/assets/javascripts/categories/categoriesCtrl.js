@@ -11,11 +11,13 @@ function($scope, Upload, categories, category){
 		categories.addItem(category.id, {
 			name: $scope.name,
 			corporate: true,
-			neighborhood: "Headquarters"
+			neighborhood: "Headquarters",
+			paypalID: $scope.paypal,
 		}).success(function(item){
 			$scope.category.items.push(item);
 		});
 		$scope.name = "";
+		$scope.paypal = "";
 	};
 
 }])

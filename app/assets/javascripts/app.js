@@ -18,6 +18,11 @@ function($stateProvider, $urlRouterProvider) {
 			url: "/community",
 			templateUrl: "community/_community.html",
 			controller: "CommunityCtrl",
+			resolve: {
+				user: ["$state", "Auth", function($state, Auth){
+					return Auth.currentUser()
+				}]
+			}
 		})
 		.state("equipment", {
 			url: "/equipment",

@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
   def create
     category = Category.find(params[:category_id])
+    binding.pry
     item = category.items.create(item_params)
     respond_with category, item
   end
@@ -16,6 +17,6 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :image, :corporate)
+    params.require(:item).permit(:name, :image, :corporate, :neighborhood, :paypalID)
   end
 end
