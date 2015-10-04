@@ -25,6 +25,8 @@ function($scope, categories, Auth, communityItems){
 		});
 	};
 
+	$scope.neighborhood = 'bushwick'
+
 	$scope.map = {
 		center: {
 			latitude: 40.7,

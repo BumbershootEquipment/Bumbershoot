@@ -5,7 +5,7 @@
 		<h1>Nearby Community Items</h1>
 
 		<div class="community_items">
-			<div class="community_item" ng-repeat="item in items | filter: {corporate : false}">
+			<div class="community_item" ng-repeat="item in items | filter: {corporate : false, neighborhood : neighborhood}">
 
 				<p>{{item.name}}</p>
 			</div>
