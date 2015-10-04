@@ -5,6 +5,7 @@ angular.module("bumbershoot")
 "Auth",
 "authentication",
 function($scope, $state, Auth, authentication){
+	
 	$scope.login = function(){
 		Auth.login($scope.user).then(function(){
 			$state.go("home");

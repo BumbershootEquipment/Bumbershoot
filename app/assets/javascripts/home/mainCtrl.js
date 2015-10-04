@@ -1,7 +1,9 @@
 angular.module("bumbershoot")
 .controller("MainCtrl", [
 "$scope",
-function($scope){
+"Auth",
+function($scope, Auth){
+	$scope.signedIn = Auth.isAuthenticated;
 }])
 
 
