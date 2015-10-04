@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
 
   def create
     category = Category.find(params[:category_id])
-    binding.pry
     item = category.items.create(item_params)
     respond_with category, item
   end
