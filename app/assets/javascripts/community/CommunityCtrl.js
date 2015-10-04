@@ -33,10 +33,24 @@ function($scope, categories, Auth, communityItems){
 		zoom: 12,
 	};
 
-	$scope.marker = {
-		coords: {
-			latitude: 40.715,
-			longitude: -73.987
-		}
-	};
+	$scope.markerList = [
+		{
+			coords: {
+				latitude: 40.715,
+				longitude: -73.987
+			},
+			idKey: 1,
+			message: "neighregs",
+		},
+
+		{
+			coords: {
+				latitude: 40.74,
+				longitude: -73.987
+			},
+			idKey: 2,
+			message: "neighregs",
+		},
+	];
+
 }])

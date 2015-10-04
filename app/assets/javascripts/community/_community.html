@@ -3,21 +3,24 @@
 		<h1>My orders</h1>
 		<h1>My Items</h1>
 		<h1>Nearby Community Items</h1>
-		<h1>Form for new Community Items</h1>
 
-		<div class="community_items" ng-repeat="item in items | filter: {corporate:false} ">
+		<div class="community_items">
+			<div class="community_item" ng-repeat="item in items | filter: {corporate : false}">
 
-			<p>{{item.name}}</p>
+				<p>{{item.name}}</p>
+			</div>
 		</div>
 
 		<ui-gmap-google-map center="map.center" zoom="map.zoom">
-			<ui-gmap-marker idkey="1" coords="marker.coords"> </ui-gmap-marker>
+			<ui-gmap-marker ng-repeat="marker in markerList" idkey="marker.idKey" coords="marker.coords"> 
+
+			</ui-gmap-marker>
 		</ui-gmap-google-map>
 			
 
 
-		<div ng-show="signedIn()">
-			<form ng-submit="addCommunityItem()">
+		<div>
+			<form ng-show="signedIn()" ng-submit="addCommunityItem()">
 				<div>
 					<select ng-model="category">
 						<option value="" disabled>Category</option>
