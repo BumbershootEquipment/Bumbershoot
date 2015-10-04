@@ -2,22 +2,27 @@ angular.module('bumbershoot')
 .controller("CommunityCtrl", [
 "$scope",
 "categories",
-"user",
+"Auth",
 "communityItems",
+function($scope, categories, Auth, communityItems){
 
-function($scope, categories, user, communityItems){
 	$scope.items = communityItems.data;
 	$scope.addCommunityItem = function(){
-		if(!$scope.name || $scope.name === ""){return;}
-		var id = $scope.category;
-		categories.addItem(id, {
-			name: $scope.name,
-			corporate: false,
-			owner: user.email,
-			neighborhood: $scope.neighborhood
-		}).success(function(item){
-			console.log("Item added")
-		})
+		var user; 
+		Auth.currentUser().then(function(res){
+			console.log(res.email)
+			user = res
+			if(!$scope.name || $scope.name === ""){return;}
+			var id = $scope.category;
+			categories.addItem(id, {
+				name: $scope.name,
+				corporate: false,
+				owner: user.email,
+				neighborhood: $scope.neighborhood
+			}).success(function(item){
+				console.log("Item added")
+			})
+		});
 	};
 
 	$scope.map = {
