@@ -6,6 +6,7 @@ angular.module('bumbershoot')
 "communityItems",
 
 function($scope, categories, user, communityItems){
+	$scope.items = communityItems.data;
 	$scope.addCommunityItem = function(){
 		if(!$scope.name || $scope.name === ""){return;}
 		var id = $scope.category;

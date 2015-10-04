@@ -5,7 +5,9 @@
 		<h1>Nearby Community Items</h1>
 		<h1>Form for new Community Items</h1>
 
-		<div class="community_items">
+		<div class="community_items" ng-repeat="item in items | filter: {corporate:false} ">
+
+			<p>{{item.name}}</p>
 		</div>
 
 		<ui-gmap-google-map center="map.center" zoom="map.zoom">

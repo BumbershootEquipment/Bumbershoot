@@ -21,6 +21,9 @@ function($stateProvider, $urlRouterProvider) {
 			resolve: {
 				user: ["$state", "Auth", function($state, Auth){
 					return Auth.currentUser()
+				}],
+				communityItems:["communityItems", function(communityItems){
+					return communityItems.getAll();
 				}]
 			}
 		})
