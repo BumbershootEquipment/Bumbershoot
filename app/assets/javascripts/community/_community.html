@@ -15,10 +15,8 @@
 		</ui-gmap-google-map>
 			
 
-			<div ng-hide="signedIn()">
-				<p> Test </p>
-			</div>	
-		<div>
+
+		<div ng-show="signedIn()">
 			<form ng-submit="addCommunityItem()">
 				<div>
 					<select ng-model="category">
