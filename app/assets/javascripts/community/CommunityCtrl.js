@@ -40,16 +40,24 @@ function($scope, categories, Auth, communityItems){
 				longitude: -73.987
 			},
 			idKey: 1,
-			message: "neighregs",
+			message: "neighborhood 1",
 		},
 
 		{
 			coords: {
 				latitude: 40.74,
-				longitude: -73.987
+				longitude: -73.967
 			},
 			idKey: 2,
-			message: "neighregs",
+			message: "TWO",
+		},
+		{
+			coords: {
+				latitude: 40.725,
+				longitude: -73.887
+			},
+			idKey: 3,
+			message: "EUHG",
 		},
 	];
 

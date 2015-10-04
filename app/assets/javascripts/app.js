@@ -19,9 +19,6 @@ function($stateProvider, $urlRouterProvider) {
 			templateUrl: "community/_community.html",
 			controller: "CommunityCtrl",
 			resolve: {
-				// user: ["$state", "Auth", function($state, Auth){
-				// 	return Auth.currentUser()
-				// }],
 				communityItems:["communityItems", function(communityItems){
 					return communityItems.getAll();
 				}]
