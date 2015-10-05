@@ -20,17 +20,13 @@ function($scope, categories, Auth, communityItems){
 				owner: user.email,
 				neighborhood: $scope.neighborhood
 			}).success(function(item){
-				console.log("Item added")
 			})
 		});
 	};
 
 	$scope.selectNeighborhood = function(){
-		console.log("Boop")
 		$scope.neighborhood = $scope.newNeighborhood
 	};
-
-	//$scope.neighborhood = 'bushwick'
 
 	$scope.map = {
 		center: {
