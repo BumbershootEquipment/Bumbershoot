@@ -1,7 +1,5 @@
 <div class="community_background">
 	<div class="community_container">
-		<h1>My orders</h1>
-		<h1>My Items</h1>
 		<h1>Nearby Community Items</h1>
 
 		<div class="set_neighborhood">
@@ -22,7 +20,7 @@
 
 		<div class="community_items">
 			<div class="community_item" ng-repeat="item in items | filter: {corporate : false, neighborhood : neighborhood}">
-				<p>{{item.name}}</p>
+				<p>{{item.name}} - {{item.neighborhood}}</p>
 			</div>
 		</div>
 
