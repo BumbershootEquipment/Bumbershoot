@@ -9,9 +9,12 @@
 			<form ng-submit="selectNeighborhood()">
 				<select ng-model="newNeighborhood">
 					<option value="" disabled>Neighborhood</option>
-					<option value="bushwick">Bushwick</option>
-					<option value="williamsburg">Williamsburg</option>
-					<option value="greenpoint">Greenpoint</option>					
+					<option value="Manhattan">Manhattan</option>
+					<option value="Brooklyn">Brooklyn</option>
+					<option value="queens">Queens</option>		
+					<option value="bronx">The Bronx</option>	
+					<option value="staten_island">Staten Island</option>	
+					<option value="jersey">North Jersey</option>				
 				</select>
 				<button class="button-primary" type="submit">Filter Items</button>
 			</form>
@@ -46,10 +49,13 @@
 						<option value="5">Miscellaneous</option>
 					</select>
 					<select ng-model="neighborhood">
-						<option value="" disabled>Neighborhood</option>
-						<option value="Williamsburg">Williamsburg</option>
-						<option value="Greenpoint">Greenpoint</option>
-						<option value="Bushwick">Bushwick</option>
+					<option value="" disabled>Neighborhood</option>
+					<option value="manhattan">Manhattan</option>
+					<option value="brooklyn">Brooklyn</option>
+					<option value="queens">Queens</option>		
+					<option value="bronx">The Bronx</option>	
+					<option value="staten_island">Staten Island</option>	
+					<option value="jersey">North Jersey</option>
 					</select>
 					<input type="text"
 						placeholder="Item name"
