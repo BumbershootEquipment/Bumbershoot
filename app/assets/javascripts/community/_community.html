@@ -4,9 +4,21 @@
 		<h1>My Items</h1>
 		<h1>Nearby Community Items</h1>
 
+		<div class="set_neighborhood">
+			<h3> Filter by Neighborhood </h3>
+			<form ng-submit="selectNeighborhood()">
+				<select ng-model="newNeighborhood">
+					<option value="" disabled>Neighborhood</option>
+					<option value="bushwick">Bushwick</option>
+					<option value="williamsburg">Williamsburg</option>
+					<option value="greenpoint">Greenpoint</option>					
+				</select>
+				<button class="button-primary" type="submit">Filter Items</button>
+			</form>
+		</div>
+
 		<div class="community_items">
 			<div class="community_item" ng-repeat="item in items | filter: {corporate : false, neighborhood : neighborhood}">
-
 				<p>{{item.name}}</p>
 			</div>
 		</div>

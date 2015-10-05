@@ -25,9 +25,10 @@ function($scope, categories, Auth, communityItems){
 		});
 	};
 
-	$scope.setNeighborhood = function(){
-		//FINISH THIS METHOD
-	}
+	$scope.selectNeighborhood = function(){
+		console.log("Boop")
+		$scope.neighborhood = $scope.newNeighborhood
+	};
 
 	//$scope.neighborhood = 'bushwick'
 
