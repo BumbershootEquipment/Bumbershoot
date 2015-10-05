@@ -37,26 +37,26 @@ function($scope, categories, Auth, communityItems){
 			latitude: 40.7,
 			longitude: -74
 		},
-		zoom: 12,
+		zoom: 10,
 	};
 
 	$scope.markerList = [
 		{
 			coords: {
-				latitude: 40.715,
-				longitude: -73.987
+				latitude: 40.783,
+				longitude: -73.973
 			},
 			idKey: 1,
-			message: "neighborhood 1",
+			message: "Manhattan",
 		},
 
 		{
 			coords: {
-				latitude: 40.74,
-				longitude: -73.967
+				latitude: 40.68,
+				longitude: -73.959
 			},
 			idKey: 2,
-			message: "TWO",
+			message: "Brooklyn",
 		},
 		{
 			coords: {
@@ -64,7 +64,31 @@ function($scope, categories, Auth, communityItems){
 				longitude: -73.887
 			},
 			idKey: 3,
-			message: "EUHG",
+			message: "Queens",
+		},
+		{
+			coords: {
+				latitude: 40.845,
+				longitude: -73.86
+			},
+			idKey: 3,
+			message: "The Bronx",
+		},
+		{
+			coords: {
+				latitude: 40.58,
+				longitude: -74.15
+			},
+			idKey: 3,
+			message: "Staten Island",
+		},
+		{
+			coords: {
+				latitude: 40.725,
+				longitude: -74.06
+			},
+			idKey: 3,
+			message: "North Jersey",
 		},
 	];
 
