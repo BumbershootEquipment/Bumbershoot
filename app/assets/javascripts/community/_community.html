@@ -23,7 +23,8 @@
 				<a href="mailto:{{item.owner}}?subject=Bumbershoot%20Item%20Inquiry">{{item.name}} - {{item.neighborhood}}</a>
 			</div>
 		</div>
-
+		
+		<div class="map_overlay" onClick="style.pointerEvents='none'"></div>
 		<ui-gmap-google-map center="map.center" zoom="map.zoom">
 			<ui-gmap-marker ng-repeat="marker in markerList" idkey="marker.idKey" coords="marker.coords"> 
 				<ui-gmap-window isIconVisibleOnClick="true">
@@ -33,6 +34,7 @@
 				</ui-gmap-window>
 			</ui-gmap-marker>
 		</ui-gmap-google-map>
+		
 			
 
 
