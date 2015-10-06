@@ -1,4 +1,4 @@
-angular.module("bumbershoot", ["ui.router", "templates", "Devise", "ngFileUpload", 'uiGmapgoogle-maps'])
+angular.module("bumbershoot", ["ui.router", "templates", "Devise", "ngFileUpload", 'uiGmapgoogle-maps', 'ui.gravatar'])
 .config([
 "$stateProvider",
 "$urlRouterProvider",
