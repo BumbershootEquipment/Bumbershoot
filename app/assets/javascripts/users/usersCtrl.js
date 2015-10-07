@@ -2,6 +2,7 @@ angular.module("bumbershoot")
 .controller("UsersCtrl", [
 "$scope",
 "user",
-function($scope, user){
+"profileFactory"
+function($scope, user, profileFactory){
 	$scope.user = user;
 }])
