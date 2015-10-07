@@ -1,7 +1,32 @@
 <div class="profile_background">
-	<h1> {{user.username}} </h1>
-	<h1> My orders </h1>
-	<h1> My items </h1>
+	<div class="profile_spacer"></div>
+	<div class="profile_container">
+		<div class="grid profile_data">
+			<div class="col-1-3 profile_image_container">
+				<h1> {{user.username}} </h1>
+				<img class="profile_image" src="/assets/gravatar.jpg" gravatar-src="{{user.email}}" gravatar-size="150">
+			</div>
 
-	<img class="profile_image" src="/assets/gravatar.jpg" gravatar-src="{{user.email}}" gravatar-size="150">
+			<div class="col-1-3 profile_orders">
+				<h1> My orders </h1>
+				<div ng-repeat="orders in user.orders">
+					<a href="">{{user.orders}}</a>
+				</div>
+			</div>
+			<div class="col-1-3 profile_items">
+				<h1> My items </h1>
+				<div ng-repeat="items in user.items">
+					<a href="">{{items}}</a>
+				</div>
+			</div>
+		</div>
+		<div class="grid profile_links">
+			<div class="col-1-2 profile_link">
+				<h3>Equipment</h3>
+			</div>
+			<div class="col-1-2 profile_link">
+				<h3>Community</h3>
+			</div>
+		</div>
+	</div>	
 </div>
