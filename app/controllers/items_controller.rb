@@ -16,6 +16,6 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :image, :corporate, :neighborhood, :paypalID, :owner)
+    params.require(:item).permit(:name, :image, :corporate, :neighborhood, :paypalID, :owner, :owner_id)
   end
 end

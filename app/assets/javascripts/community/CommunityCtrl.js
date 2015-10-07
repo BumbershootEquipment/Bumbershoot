@@ -10,7 +10,6 @@ function($scope, categories, Auth, communityItems){
 	$scope.addCommunityItem = function(){
 		var user; 
 		Auth.currentUser().then(function(res){
-			console.log(res.email)
 			user = res
 			if(!$scope.name || $scope.name === ""){return;}
 			var id = $scope.category;
@@ -18,6 +17,7 @@ function($scope, categories, Auth, communityItems){
 				name: $scope.name,
 				corporate: false,
 				owner: user.email,
+				owner_id: user.id,
 				neighborhood: $scope.neighborhood
 			}).success(function(item){
 			})
