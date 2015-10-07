@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  get "/profile", to: "profile#show"
-  get "/profile/orders/:id", to: "profile#get_user_orders"
-  get "/profile/items/:id", to: "profile#get_user_items"
   root to: "application#angular"
 
   resources :categories, only: [:create, :index, :show] do
@@ -14,6 +11,10 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  get "/profile", to: "profile#show"
+  get "/profile/orders/:user_id", to: "profile#get_user_orders"
+  get "/profile/items/:user_id", to: "profile#get_user_items"
 
   post "/register" => "emails#welcome"
   get "/community_order/:user_id/:owner_id", to: "emails#community_order"
