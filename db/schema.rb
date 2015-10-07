@@ -16,14 +16,6 @@ ActiveRecord::Schema.define(version: 20150930221637) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "adjustments", force: true do |t|
-    t.string   "source_type"
-    t.integer  "source_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "note"
-  end
-
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
