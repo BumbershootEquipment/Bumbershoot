@@ -5,14 +5,6 @@ class OrdersController < ApplicationController
     respond_with Order.all
   end
 
-  def get_users_orders(user_id)
-    respond_with Order.where(user_id: user_id)
-  end
-
-  def get_users_items(owner)
-    respond_with Item.where(owner: owner)
-  end
-
   def create
     item = Item.find(params[:item_id])
     order = item.orders.create(order_params)
