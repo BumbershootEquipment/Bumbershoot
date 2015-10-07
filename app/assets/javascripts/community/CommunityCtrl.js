@@ -20,6 +20,9 @@ function($scope, categories, Auth, communityItems){
 				owner_id: user.id,
 				neighborhood: $scope.neighborhood
 			}).success(function(item){
+				$scope.name = "";
+				$scope.category = "";
+				$scope.neighborhood = "";
 			})
 		});
 	};
