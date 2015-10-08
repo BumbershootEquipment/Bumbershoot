@@ -62,7 +62,7 @@ function($stateProvider, $urlRouterProvider) {
 			templateUrl: "users/_profile.html",
 			controller: "UsersCtrl",
 			resolve:{
-				user: ["$state", "Auth", "profileFactory", function($state, Auth, profileFactory){
+				userData: ["$state", "Auth", "profileFactory", function($state, Auth, profileFactory){
 					return {
 						user: Auth.currentUser(),
 						profileOrders: function(user){

@@ -1,15 +1,15 @@
 angular.module("bumbershoot")
 .controller("UsersCtrl", [
 "$scope",
-"user",
+"userData",
 
-function($scope, user){
-	user.user.then(function(result){
+function($scope, userData){
+	userData.user.then(function(result){
 		$scope.user = result
-		user.profileOrders(result).then(function(orders){
+		userData.profileOrders(result).then(function(orders){
 			$scope.orders = orders.data
 		})
-		user.profileItems(result).then(function(items){
+		userData.profileItems(result).then(function(items){
 			$scope.items = items.data
 		})
 	})
