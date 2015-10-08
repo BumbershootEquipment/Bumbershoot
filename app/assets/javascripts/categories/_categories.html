@@ -7,10 +7,11 @@
 			</h3>
 		</div>
 
-		<div ng-repeat="item in category.items | filter:{corporate: true} ">
-			<a href="#/categories/{{category.id}}/items/{{item.id}}">{{item.name}}</a>
+		<div class="category_items">
+			<div class="category_item" ng-repeat="item in category.items | filter:{corporate: true} ">
+				<a href="#/categories/{{category.id}}/items/{{item.id}}">{{item.name}}</a>
+			</div>
 		</div>
-
 
 		<form ng-submit="addCorporateItem()">
 			<div>

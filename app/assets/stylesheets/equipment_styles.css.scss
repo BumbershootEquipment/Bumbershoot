@@ -21,9 +21,20 @@
 	color: #343E52;
 }
 
-
 .equipment-category {
 	font-size: 25px;
 	margin-top: 25px;
 	margin-bottom: 25px; 
+}
+
+// Category Page
+
+.category_item {
+	display: inline-block;
+	font-size: 20px;
+	padding: 20px 0;
+	width: 250px;
+	height: 70px;
+	margin: 15px;
+	border: solid grey 3px;
 }
