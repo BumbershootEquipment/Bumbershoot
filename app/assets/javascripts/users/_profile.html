@@ -4,21 +4,21 @@
 		<div class="grid profile_data">
 			<div class="col-1-3 profile_image_container">
 				<h1> {{user.username}} </h1>
-				<img class="profile_image" src="/assets/gravatar.jpg" gravatar-src="{{user.email}}" gravatar-size="150">
+				<img class="profile_image" src="/assets/gravatar.jpg"  gravatar-size="150">
 			</div>
 
 			<div class="col-1-3 profile_orders">
 				<h1> My orders </h1>
 				<h4>Order from the Equipment Portal</h4>
-				<div ng-repeat="orders in user.orders">
-					<a href="">{{user.orders}}</a>
+				<div ng-repeat="order in orders">
+					<a href="">{{order.comments}}</a>
 				</div>
 			</div>
 			<div class="col-1-3 profile_items">
 				<h1> My items </h1>
 				<h4>Add Items in the Community Portal</h4>
-				<div ng-repeat="items in user.items">
-					<a href="">{{items}}</a>
+				<div ng-repeat="item in items">
+					<a href="">{{item.name}}</a>
 				</div>
 			</div>
 		</div>

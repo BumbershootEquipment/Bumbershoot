@@ -3,14 +3,18 @@ angular.module("bumbershoot")
 	"$http",
 	function($http){
 		var o = {
-			data: []
+			orders: [],
+			items: []
 		};
-		o.getOrders = function(){
-
+		o.getOrders = function(id){
+			return $http.get("/profile/orders/" + id +".json").success(function(data){
+				angular.copy(data, o.orders)
+			});
 		};
-		o.getItems = function(){
-
+		o.getItems = function(id){
+			return $http.get("/profile/items/" + id +".json").success(function(data){
+				angular.copy(data, o.items)
+			});
 		};
-
-			
+	return o;
 }]);

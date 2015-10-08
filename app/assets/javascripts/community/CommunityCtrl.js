@@ -7,6 +7,7 @@ angular.module('bumbershoot')
 function($scope, categories, Auth, communityItems){
 
 	$scope.items = communityItems.data;
+	console.log(communityItems)
 	$scope.addCommunityItem = function(){
 		var user; 
 		Auth.currentUser().then(function(res){

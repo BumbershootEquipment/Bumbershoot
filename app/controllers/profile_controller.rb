@@ -1,12 +1,11 @@
 class ProfileController < ApplicationController
 
   def get_user_items
-    binding.pry
-    render json: Item.where(owner_id: params[:user_id])
+    respond_with Item.where(owner_id: params[:user_id])
   end
 
   def get_user_orders
-    render json: Order.where(user_id: params[:user_id])
+    respond_with Order.where(user_id: params[:user_id])
   end
 
   private
