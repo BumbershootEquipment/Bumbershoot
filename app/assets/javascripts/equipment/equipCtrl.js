@@ -13,4 +13,6 @@ function($scope, categories, Auth){
 	};
 
 	$scope.categories = categories.categories;
+
+	$scope.checkAdmin = Auth.isAdminAuthenticated;
 }])

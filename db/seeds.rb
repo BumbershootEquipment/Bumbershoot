@@ -112,6 +112,6 @@ items = [
 ]
 
 items.each do |name, category_id, paypalID, price, description|
-  Item.create(name: name, category_id: category_id, paypalID: paypalID, price: price, description: description)
+  Item.create(name: name, category_id: category_id, paypalID: paypalID, price: price, description: description, corporate: true)
 end
 

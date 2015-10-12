@@ -292,6 +292,14 @@
                 return service.login();
             },
 
+            isAdminAuthenticated: function(){
+                if (!!service._currentUser){
+                    return service._currentUser.id === 1
+                } else {
+                    return false
+                }
+            },
+
             /**
              * A helper function to determine if a currentUser is present.
              *

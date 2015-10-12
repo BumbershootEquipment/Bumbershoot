@@ -51,9 +51,6 @@ function($stateProvider, $urlRouterProvider) {
 			resolve: {
 				item: ["$stateParams", "items", function($stateParams, items){
 					return items.get($stateParams.cat_id, $stateParams.item_id);
-				}],
-				user: ["$state", "Auth", function($state, Auth){
-					return Auth.currentUser()
 				}]
 			}
 		})

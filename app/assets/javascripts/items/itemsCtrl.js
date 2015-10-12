@@ -3,8 +3,7 @@ angular.module("bumbershoot")
 "$scope",
 "items",
 "item",
-"user",
-function($scope, items, item, user){
+function($scope, items, item){
 	$scope.item = item;
 	$scope.addDescription = function(){
 		if($scope.body === ""){return;}
