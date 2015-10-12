@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create(email: "BumbershootEquip@Gmail.com", password: ENV['dmin_password'], username: "Admin")
+
+categories = Category.create([{name: "Sleep"}, {name: "Cook"}, {name: "Recreation"}, {name: "Miscellaneous"}])
 
 descriptions = [
   {size: "2 Burner",
