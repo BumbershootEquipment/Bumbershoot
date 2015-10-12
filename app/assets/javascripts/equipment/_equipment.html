@@ -17,7 +17,8 @@
 				</div>
 			</div>
 
-			<form class="col-1-1 pure-form" ng-submit="addCategory()">
+
+			<form ng-show="signedIn()" class="col-1-1 pure-form" ng-submit="addCategory()">
 				<input type="text" ng-model="name"></input>
 				<button class="button-primary" type="submit">Add Category</button>
 			</form>

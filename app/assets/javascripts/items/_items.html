@@ -12,7 +12,7 @@
 
 		<img class="item-image" ng-src="/assets/logos/{{item.category_id}}.png"/>
 
-		<form ng-submit="addDescription()">
+		<form ng-show="signedIn()" ng-submit="addDescription()">
 			<div>
 				<input type="text"
 					placeholder="Description"

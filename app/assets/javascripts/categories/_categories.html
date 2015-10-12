@@ -13,7 +13,7 @@
 			</div>
 		</div>
 
-		<form ng-submit="addCorporateItem()">
+		<form ng-show="signedIn()" ng-submit="addCorporateItem()">
 			<div>
 				<input type="text"
 					placeholder="Item name"
