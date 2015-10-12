@@ -41,5 +41,6 @@ gem "devise", "~> 3.4.0"
 gem "paperclip", "~> 4.3"
 gem "jquery-rails"
 gem "figaro"
+gem "dotenv-rails", group: :development
 
 gem "pry"
