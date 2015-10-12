@@ -6,10 +6,9 @@
 			<p>{{item.name}}</p>
 			<h3>Description:</h3>
 			<p>{{item.description.body}}</p>
-	
 		</div>
 
-		<img class="item-image" ng-src="/assets/logos/{{item.category_id}}/{{item.id}}.jpg"/>
+		<img class="item-image" ng-src="/assets/logos/{{item.category_id}}/{{item.id}}.png"/>
 
 		<form ng-show="signedIn()" ng-submit="addDescription()">
 			<div>
