@@ -21,18 +21,24 @@
 			</div>
 		</form>
 
-		<form ng-submit="placeOrder()" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<!--		<form ng-submit="placeOrder()" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 			<div>
 				<input type="text"
 				placeholder="optional comments"
 				ng-model="comments"></input>
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="SKQ7VQTNB8L94">
-				<button class='button-primary' type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">Buy with Pay Pal</button>
+				<button class='button-primary' type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">Add to Cart</button> Commented out while offline 
+				<button class="button-primary">Add to Cart</button>
 				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 			</div>
+		</form>-->
+
+		<form ng-submit="placeOrder()">
+			<button class="button-primary">Add to Cart</button>
 		</form>
 
-
+	<div ng-show="offline" class="status_flash">
+		<p>Thank you for your interest in Bumbershoot. Unfortunately, we are currently hibernating for the winter, but we will be back in the summer of 2016 to equip your summer adventures!</p>
 	</div>
 </div>

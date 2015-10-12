@@ -18,6 +18,7 @@ function($scope, items, item, user){
 	};
 
 	$scope.placeOrder = function(){
+		$scope.offline = true;
 		items.placeOrder(item.category_id, item.id, {
 			user_id: user.id,
 			comments: ($scope.comments) ? $scope.comments : "Standard Order",
