@@ -2,8 +2,7 @@ angular.module("bumbershoot")
 .controller("EquipCtrl", [
 "$scope",
 "categories",
-"Auth",
-function($scope, categories, Auth){
+function($scope, categories){
 	$scope.addCategory = function(){
 		if(!$scope.name || $scope.name === ""){return;}
 		categories.create({
@@ -13,6 +12,4 @@ function($scope, categories, Auth){
 	};
 
 	$scope.categories = categories.categories;
-
-	$scope.checkAdmin = Auth.isAdminAuthenticated;
 }])

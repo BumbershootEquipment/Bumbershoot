@@ -4,7 +4,7 @@ angular.module("bumbershoot")
 "Auth",
 function($scope, Auth){
 	$scope.signedIn = Auth.isAuthenticated;
-
+	$scope.checkAdmin = Auth.isAdminAuthenticated;
 }])
 
 
