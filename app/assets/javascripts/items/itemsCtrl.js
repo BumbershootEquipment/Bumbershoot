@@ -23,7 +23,7 @@ function($scope, items, item){
 			comments: ($scope.comments) ? $scope.comments : "Standard Order",
 		}).then(function(){
 			items.corporateOrderEmail(
-				user
+				user.id
 			).success(function(data){
 				console.log("order email")
 			});

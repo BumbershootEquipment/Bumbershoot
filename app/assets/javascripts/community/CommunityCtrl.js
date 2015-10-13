@@ -20,7 +20,9 @@ function($scope, categories, Auth, communityItems){
 				owner: user.email,
 				owner_id: user.id,
 				neighborhood: $scope.neighborhood
-			}).success(function(item){
+			}).then(function(){
+				communityItems.communityItemEmail(user.id)
+			}.success(function(item){
 				$scope.name = "";
 				$scope.category = "";
 				$scope.neighborhood = "";

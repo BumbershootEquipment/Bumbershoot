@@ -10,5 +10,9 @@ angular.module("bumbershoot")
 				angular.copy(data, o.items)
 			});
 		};
+
+		o.communityItemEmail = function(user){
+			return $http.get("/community_item/"+ user.id);
+		};
 	return o;
 }]);
