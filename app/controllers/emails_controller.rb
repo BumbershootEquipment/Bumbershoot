@@ -19,4 +19,9 @@ class EmailsController < ApplicationController
     render nothing: true
   end
 
+  def community_item
+    @owner = User.find(params["id"])
+    UserMailer.community_item(@owner).deliver
+    render nothing: true
+  end
 end
