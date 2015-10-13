@@ -7,8 +7,8 @@ class EmailsController < ApplicationController
   end
 
   def community_order
-    @user = user
-    @owner = owner
+    @user = User.find(params["user_id"])
+    @owner = User.find(params["owner_id"])
     UserMailer.community_order(@user, @owner).deliver
     render nothing: true
   end

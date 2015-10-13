@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   post "/register" => "emails#welcome"
   get "/community_order/:user_id/:owner_id", to: "emails#community_order"
   get "/corporate_order/:id", to: "emails#corporate_order"
-  get "/community_item/:owner_id", to: "emails#community_item"
+  get "/community_item/:id", to: "emails#community_item"
 end

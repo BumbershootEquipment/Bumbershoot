@@ -16,4 +16,9 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(to: @user.email, subject: "New order from Bumbershoot")
   end
+
+  def community_item(owner)
+    @owner = owner
+    mail(to: @owner.email, subject: "Thank you for registering an Item")
+  end
 end
