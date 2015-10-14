@@ -4,6 +4,11 @@
 
 		<div class="set_neighborhood">
 			<h3> Filter by Neighborhood </h3>
+			<div ng-show="orderResponse" class="status_flash">
+				<p>Thank you for adding an item to our community! <br>
+					Please be patient as all items must be approved <br>
+					by moderators before display.</p>
+			</div>
 			<form ng-submit="selectNeighborhood()">
 				<select ng-model="newNeighborhood">
 					<option value="" disabled>Neighborhood</option>
@@ -49,7 +54,7 @@
 						<option value="3">Recreation</option>
 						<option value="5">Miscellaneous</option>
 					</select>
-					<select ng-model="neighborhood">
+					<select ng-model="newNeighborhood">
 					<option value="" disabled>Neighborhood</option>
 					<option value="manhattan">Manhattan</option>
 					<option value="brooklyn">Brooklyn</option>

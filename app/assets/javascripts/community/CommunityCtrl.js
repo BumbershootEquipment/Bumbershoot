@@ -19,7 +19,7 @@ function($scope, communityItems, categories, Auth){
 				corporate: false,
 				owner: user.email,
 				owner_id: user.id,
-				neighborhood: $scope.neighborhood
+				neighborhood: $scope.newNeighborhood
 			}).then(function(){
 				console.log(communityItems)
 				categories.communityItemEmail(
@@ -27,7 +27,8 @@ function($scope, communityItems, categories, Auth){
 				).success(function(item){
 					$scope.name = "";
 					$scope.category = "";
-					$scope.neighborhood = "";
+					$scope.newNeighborhood = "";
+					$scope.orderResponse = true
 				})
 			})
 		});

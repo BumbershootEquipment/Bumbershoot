@@ -9,8 +9,6 @@ class UserMailer < ActionMailer::Base
   def community_order(user, owner)
     @user = user
     @owner = owner
-        binding.pry
-
     mail(to: @user.email, subject: "Community Equipment Order")
   end
 
