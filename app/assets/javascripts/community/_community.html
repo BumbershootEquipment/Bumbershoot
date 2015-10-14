@@ -1,4 +1,5 @@
 <div class="community_background">
+	<div class="community-spacer"></div>
 	<div class="community_container">
 		<h1>Nearby Community Items</h1>
 
@@ -44,9 +45,10 @@
 			
 
 
-		<div>
+		<div class='item_creation'>
 			<form ng-show="signedIn()" ng-submit="addCommunityItem()">
 				<div>
+					<h3> Add your Equipment to the Community</h3>
 					<select ng-model="category">
 						<option value="" disabled>Category</option>
 						<option value="1">Sleep</option>
