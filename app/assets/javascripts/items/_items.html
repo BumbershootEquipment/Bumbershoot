@@ -1,16 +1,21 @@
 <div class="equipment-background">
 	<div class="equipment-spacer"></div>
-	<div class="equipment-container">
+	<div class="equipment-container col-1-1">
 		<div class="equipment-header">
-			<h3>Item Name:</h3>
-			<p>{{item.name}}</p>
-			<h3>Description:</h3>
-			<p>{{item.description.body}}</p>
+			<div class="col-1-2">
+				<img class="item-image" ng-src="/assets/logos/{{item.category_id}}/{{item.id}}.png"/>
+			</div>
+			<div class="item_name col-1-2">
+				<h3>Item:</h3>
+				<p>{{item.name}}</p>
+			</div>
+			<div class="item_description col-1-1">
+				<h3>Description:</h3>
+				<p>{{item.description.body}}</p>
+			</div>
 		</div>
 
-		<img class="item-image" ng-src="/assets/logos/{{item.category_id}}/{{item.id}}.png"/>
-
-		<form ng-show="checkAdmin()" ng-submit="addDescription()">
+		<form class="col-1-1" ng-show="checkAdmin()" ng-submit="addDescription()">
 			<div>
 				<input type="text"
 					placeholder="Description"
@@ -31,10 +36,11 @@
 				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 			</div>
 		</form>-->
-
-		<form ng-submit="placeOrder()">
-			<button class="button-primary">Add to Cart</button>
-		</form>
+		<div class="item_order_button col-1-1">	
+			<form ng-submit="placeOrder()">
+				<button class="button-primary">Add to Cart</button>
+			</form>
+		</div>
 
 	<div ng-show="offline" class="status_flash">
 		<p>Thank you for your interest in Bumbershoot. Unfortunately, we are currently hibernating for the winter, but we will be back in the summer of 2016 to equip your summer adventures!</p>

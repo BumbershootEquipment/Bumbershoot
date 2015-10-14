@@ -1,8 +1,22 @@
 .item-image {
-	width: 150px;
+	width: 300px;
+	padding: 20px;
+	border: solid grey 3px;
 }
 
 .status_flash{
 	width: 500px;
 	margin: 30px auto 0 auto;
+}
+
+.item_name {
+	padding: 5% 0;
+}
+
+.item_description {
+	margin-top: 30px;
+}
+
+.item_order_button {
+	padding-top: 30px;
 }
