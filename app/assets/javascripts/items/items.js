@@ -22,7 +22,7 @@ angular.module("bumbershoot")
 	};
 
 	o.corporateOrderEmail = function(user){
-		return $http.get("/corporate_order/"+ user.id);
+		return $http.get("/corporate_order/"+ user);
 	};
 
 // 	o.getAll = function(){

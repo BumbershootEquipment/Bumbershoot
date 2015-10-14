@@ -23,5 +23,9 @@ angular.module("bumbershoot")
 		o.addItem = function(id, item){
 			return $http.post("/categories/" + id + "/items.json", item);
 		};
+
+		o.communityItemEmail = function(user){
+			return $http.get("/community_item/"+ user);
+		};
 	return o;
 }]);

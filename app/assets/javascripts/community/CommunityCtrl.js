@@ -1,10 +1,10 @@
 angular.module('bumbershoot')
 .controller("CommunityCtrl", [
 "$scope",
+"communityItems",
 "categories",
 "Auth",
-"communityItems",
-function($scope, categories, Auth, communityItems){
+function($scope, communityItems, categories, Auth){
 
 	$scope.items = communityItems.data;
 	console.log(communityItems)
@@ -21,11 +21,14 @@ function($scope, categories, Auth, communityItems){
 				owner_id: user.id,
 				neighborhood: $scope.neighborhood
 			}).then(function(){
-				communityItems.communityItemEmail(user.id)
-			}.success(function(item){
-				$scope.name = "";
-				$scope.category = "";
-				$scope.neighborhood = "";
+				console.log(communityItems)
+				categories.communityItemEmail(
+					user.id
+				).success(function(item){
+					$scope.name = "";
+					$scope.category = "";
+					$scope.neighborhood = "";
+				})
 			})
 		});
 	};
